@@ -41,22 +41,18 @@
 ## Project Structure
 
 ```
-PracticalTest/
-├── PracticalTest.API/              → .NET 8 Web API
-│   ├── Controllers/
-│   │   ├── DepartmentController.cs
-│   │   └── EmployeeController.cs
-│   ├── Data/
-│   │   ├── DepartmentRepository.cs
-│   │   └── EmployeeRepository.cs
-│   ├── Models/
-│   │   ├── Department.cs
-│   │   └── Employee.cs
-│   ├── appsettings.json
-│   ├── appsettings.Development.json.example
-│   └── Program.cs
-│
-├── pacifickode-ui/                 → React + Vite + TypeScript
+Pacifickode-Practicaltest/
+├── Controllers/
+│   ├── DepartmentController.cs
+│   └── EmployeeController.cs
+├── Data/
+│   ├── DepartmentRepository.cs
+│   └── EmployeeRepository.cs
+├── Models/
+│   ├── Department.cs
+│   └── Employee.cs
+├── Properties/
+├── pacifickode-ui/                        → React + Vite + TypeScript
 │   ├── src/
 │   │   ├── api/
 │   │   │   ├── departmentApi.ts
@@ -83,9 +79,14 @@ PracticalTest/
 │   │   └── index.css
 │   ├── .env.example
 │   └── vite.config.ts
-│
-└── database/
-    └── schema.sql                  → Tables + indexes creation script
+├── .gitignore
+├── appsettings.json
+├── appsettings.Development.json.example
+├── Pacifickode-Practicaltest.csproj
+├── Pacifickode-Practicaltest.slnx
+├── PacificKode.sql                        → Database schema script
+├── Program.cs
+└── README.md
 ```
 
 ---
