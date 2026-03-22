@@ -1,0 +1,6 @@
+@Pacifickode_Practicaltest_HostAddress = http://localhost:5039
+
+GET {{Pacifickode_Practicaltest_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
