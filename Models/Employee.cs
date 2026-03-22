@@ -22,7 +22,7 @@ namespace Pacifickode_Practicaltest.Models
         [Required(ErrorMessage = "Date of birth is required.")]
         public DateTime DateOfBirth { get; set; }
 
-        // auto calculated from DateOfBirth
+        // auto calculate  DateOfBirth
         public int Age
         {
             get

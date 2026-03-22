@@ -17,7 +17,7 @@ builder.Services.AddCors(options =>
     });
 });
 
-var app = builder.Build();    // ← must build FIRST before checking connection
+var app = builder.Build();
 
 // ── Database connection check on startup ──
 var connectionString = app.Configuration.GetConnectionString("DefaultConnection");
@@ -34,7 +34,6 @@ catch (Exception ex)
     Console.WriteLine("❌ Database connection FAILED.");
     Console.WriteLine($"   Error: {ex.Message}");
 }
-// ── End of check ──
 
 app.UseCors("AllowReact");
 app.UseAuthorization();

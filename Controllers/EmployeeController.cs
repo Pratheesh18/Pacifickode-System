@@ -16,7 +16,7 @@ namespace Pacifickode_Practicaltest.Controllers
             _repository = repository;
         }
 
-        // GET api/employee
+        // get all employees api
         [HttpGet]
         public IActionResult GetAll()
         {
@@ -31,7 +31,7 @@ namespace Pacifickode_Practicaltest.Controllers
             }
         }
 
-        // POST api/employee
+        // Add employee api
         [HttpPost]
         public IActionResult Add([FromBody] Employee employee)
         {
@@ -52,7 +52,7 @@ namespace Pacifickode_Practicaltest.Controllers
             }
         }
 
-        // PUT api/employee/1
+        // Update employees details api
         [HttpPut("{employeeId:int}")]
         public IActionResult Update(int employeeId, [FromBody] Employee employee)
         {
@@ -75,7 +75,7 @@ namespace Pacifickode_Practicaltest.Controllers
             }
         }
 
-        // DELETE api/employee/1
+        // Delete employee api
         [HttpDelete("{employeeId:int}")]
         public IActionResult Delete(int employeeId)
         {

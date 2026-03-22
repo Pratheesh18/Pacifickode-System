@@ -138,7 +138,6 @@ namespace Pacifickode_Practicaltest.Data
             }
         }
 
-        // ── Private helper — reused by both Add and Update ──
         private static void SetEmployeeParameters(SqlCommand command, Employee employee)
         {
             command.Parameters.Add("@FirstName", SqlDbType.NVarChar, 50)
