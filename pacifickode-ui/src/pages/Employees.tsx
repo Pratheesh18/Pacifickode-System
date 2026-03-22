@@ -140,7 +140,7 @@ export default function Employees() {
       closeModal()
       loadAll()
     } catch (err: unknown) {
-         toast.error(getErrorMessage(err, 'An error occurred.'))
+         toast.error(getErrorMessage(err, 'error occurred.'))
     }
   }
 

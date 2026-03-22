@@ -18,30 +18,23 @@ import TableSpinner from '../components/TableSpinner'
 import { getErrorMessage } from '../utils/errorHelper'
 
 export default function Departments() {
-  const [departments,  setDepartments]  = useState<Department[]>([])
-  const [loading,      setLoading]      = useState(false)
-  const [showModal,    setShowModal]    = useState(false)
-  const [editingId,    setEditingId]    = useState<string | null>(null)
-  const [deleteTarget, setDeleteTarget] = useState<Department | null>(null)
+  const [departments,setDepartments]  = useState<Department[]>([])
+  const [loading,setLoading]      = useState(false)
+  const [showModal,setShowModal]    = useState(false)
+  const [editingId,setEditingId]    = useState<string | null>(null)
+  const [deleteTarget,setDeleteTarget] = useState<Department | null>(null)
 
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors, isSubmitting },
-  } = useForm<DepartmentFormData>({
-    resolver: zodResolver(departmentSchema),
-  })
+  const {register, handleSubmit, reset, formState: { errors, isSubmitting }, } = useForm<DepartmentFormData>({ resolver: zodResolver(departmentSchema),})
 
   useEffect(() => {
     loadDepartments()
   }, [])
-  
+
 const loadDepartments = async () => {
   setLoading(true)
   try {
     const res = await getDepartments()
-    const data = Array.isArray(res.data) ? res.data : []  // ← this line
+    const data = Array.isArray(res.data) ? res.data : [] 
     setDepartments(data)
   } catch {
     toast.error('Failed to load departments.')
